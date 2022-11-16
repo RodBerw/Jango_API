@@ -42,3 +42,25 @@ input {
   cursor: pointer;
   background-color: rgb(255, 255, 255);
 }
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+.pg {
+  margin: 5px 10px 5px 10px;
+  padding: 25px;
+  width: 50%;
+  margin: auto;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  background-color: rgb(226, 226, 226);
+}
+
+.pg:hover {
+  cursor: pointer;
+  background-color: rgb(255, 240, 218);
+}

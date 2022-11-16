@@ -125,7 +125,6 @@ function registerClient() {
   };
 }
 
-
 ///Client functions
 
 function validateClientCode(id) {
@@ -156,8 +155,8 @@ function validateClientString(id) {
 function validateBorn(id) {
   let input = document.getElementById(id);
   let hasNum = /[0-9]/.test(input.value);
-  length(4);
-  if (hasNum) {
+  let has4 = true ? input.value.length <= 4 : false;
+  if (hasNum && has4) {
     input.style.border = 0;
     return true;
   } else {
@@ -169,8 +168,8 @@ function validateBorn(id) {
 function validateCpf(id) {
   let input = document.getElementById(id);
   let hasNum = /[0-9]/.test(input.value);
-  length(11);
-  if (hasNum) {
+  let has11 = true ? input.value.length == 11 : false;
+  if (hasNum && has11) {
     input.style.border = 0;
     return true;
   } else {
@@ -178,7 +177,6 @@ function validateCpf(id) {
     return false;
   }
 }
-
 
 //RENT
 
@@ -201,7 +199,6 @@ function registerRent() {
   if (!confirmaSenha("returnDate")) {
     return;
   }
-  
 
   let body = {
     Code: document.getElementById("code").value,
@@ -211,8 +208,6 @@ function registerRent() {
     Cpf: document.getElementById("returnDate").value,
   };
 }
-
-
 
 ///Rent functions
 
@@ -228,7 +223,6 @@ function validateRentCode(id) {
   }
 }
 
-
 function validateClientRentCode(id) {
   let input = document.getElementById(id);
   let isClientRentCode = /[0-9]/.test(input.value);
@@ -240,7 +234,6 @@ function validateClientRentCode(id) {
     return false;
   }
 }
-
 
 function validateBookRentCode(id) {
   let input = document.getElementById(id);
@@ -254,7 +247,6 @@ function validateBookRentCode(id) {
   }
 }
 
-
 function validateRentDate(id) {
   let input = document.getElementById(id);
   let isRentDate = /[0-9]/.test(input.value);
@@ -267,7 +259,6 @@ function validateRentDate(id) {
   }
 }
 
-
 function validateReturnRentDate(id) {
   let input = document.getElementById(id);
   let isReturnRentDate = /[0-9]/.test(input.value);
@@ -279,6 +270,3 @@ function validateReturnRentDate(id) {
     return false;
   }
 }
-
-
-
